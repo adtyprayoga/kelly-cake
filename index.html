@@ -71,7 +71,7 @@
     <!-- JS -->
   </head>
   <body>
-    <div id="player" style="position: relative;">
+    <<!-- div id="player" style="position: relative;">
         <div style="position: absolute;">
             <audio controls autoplay loop="false">
                 <source src="assets/audio/Jamrud - Selamat Ulang Tahun Sounds From The Corner Live 20.mp3" type="audio/mp3">
@@ -79,7 +79,7 @@
               </audio>
             <audio autoplay hidden>
         </div>
-    </div>
+    </div> -->
     <div
       id="container"
       class="container text-center"
@@ -299,11 +299,11 @@
   ></script>
   <script src="https://cdn.jsdelivr.net/gh/cwilso/volume-meter/volume-meter.js"></script>
   <script>
-    setInterval(function () {
+    /* setInterval(function () {
         let audio = document.querySelector("audio");
         audio.volume = 0.2;
         audio.play();
-    }, 1000);
+    }, 1000); */
 
     ////////////////////
     //// AUDIO CODE ////
@@ -340,7 +340,7 @@
     // Check if is blowing
     let lowpass = 0;
     const ALPHA = 0.5,
-      THRESHOLD = 0.09;
+      THRESHOLD = 0.01;
     const isBlowing = () => {
       lowpass = ALPHA * meter.volume + (1.0 - ALPHA) * lowpass;
       return lowpass > THRESHOLD;
